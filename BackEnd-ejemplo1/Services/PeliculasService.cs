@@ -22,7 +22,7 @@ namespace BackEnd_ejemplo1.Services
                 Titulo = "XDdd",
                 Duracion = 130,
                 Pais = "Usa",
-                Publicacion = new DateTime(2015, 13, 12)
+                Publicacion = new DateTime(2015, 03, 02)
             };
             return new List<Pelicula> { pelicula, pelicula2 };
         }

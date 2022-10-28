@@ -1,4 +1,5 @@
 ﻿using BackEnd_ejemplo1.Models;
+using BackEnd_ejemplo1.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,31 @@ namespace BackEnd_ejemplo1.Controllers
             return View(op);
         }
 
+        public ActionResult MuestraPeliculas()
+        {
+            var peliculaservice = new PeliculasService();
+            var model = peliculaservice.ObtenerPelicula();
+
+            return View(model);
+        }
+
+        public ActionResult MuestraPeliculas2()
+        {
+            var peliculaservice = new PeliculasService();
+            var model = peliculaservice.ObtenerPelicula();
+
+            return View(model);
+        }
+
+        public RedirectResult temporal()
+        {
+            return Redirect("https://google.com.mx");
+        }
+
+        public RedirectToRouteResult temporal2()
+        {
+            return RedirectToAction("index","home");
+        }
 
     }
 }
